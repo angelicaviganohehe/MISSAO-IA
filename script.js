@@ -11,8 +11,14 @@ const textoResultado = document.querySelector('.texto-resultado');
 const perguntas = [
     {
     enunciado: "Em que lugar teve origem a palavra música?",
-    alternativas: ["Grécia","China e Índia","Brasil"],
-    },
+    alternativas: [
+    {
+        texto: "Grécia",
+        afirmação: "Afirmação da alternativa 1"
+        },
+        {texto: "China e Ìndia",
+        afirmação: "Afirmação da alternativa 2"
+        },
     {
     enunciado: "Quais são os elementos que compõe a dança?",
     alternativas: ["contrapeso,", "espaço","ordem e transferência"],
