@@ -12,61 +12,66 @@ const perguntas = [
     {
     enunciado: "Em que lugar teve origem a palavra música?",
     alternativas: [
+        {
+            texto: "China",
+            afirmação: ""
+        },
     {
         texto: "Grécia",
-        afirmação: "Afirmação da alternativa 1"
-        },
-       
-        {texto: "China e Ìndia",
-        afirmação: "Afirmação da alternativa 2"
-        },
-
-        {texto: "Brasil",
-        afirmação: "Afirmação da alternativa 3"
-        },
-       ]
+        afirmação: "afirmacao"
+        }
+    {
+        texto: "Brasil",
+        afirmação: ""
+    
+    }
+    {
+        texto: "Ìndia",
+        afirmação: ""
+    }
+]
     },
     {
     enunciado: "Quais são os elementos que compõe a dança?",
-    alternativas: [,
+    alternativas: [
     {
         texto: "contrapeso",
-        afirmação: "Afirmação da alternativa 1"
+        afirmação: ""
         },
 
         {texto: "espaço",
-        afirmação: "Afirmação da alternativa 2"
+        afirmação: ""
          },
 
         {texto: "ordem e transferência",
-        afirmação: "Afirmação da alternativa 3"
-         },
+        afirmação: ""
+         }
         ]
     },
     
 
     {
     enunciado: "O teatro é uma linguagem de que arte?",
-    alternativas: [,
+    alternativas: [
     {
         texto: "Artes Literàrias",
-        afirmação: "Afirmação da alternativa 1"
+        afirmação: ""
         },
 
         {texto: "Artes Cênicas",
-        afirmação: "Afirmação da alternativa 2"
+        afirmação: ""
          },
 
         {texto: "Artes Visuais",
-        afirmação: "Afirmação da alternativa 3"
+        afirmação: ""
          },
 
          {texto: "Artes musicais",
-         afirmação: "Afirmação da alternativa 4"
-          },
+         afirmação: ""
+          }
           ]
    },
-    ];
+    ]
 
     let atual = 0;
     let perguntaAtual;
@@ -79,7 +84,7 @@ const perguntas = [
             }
         perguntaAtual = perguntas[atual];
         caixaPerguntas.textContent = perguntaAtual.enunciado;
-        caixaAlternativas.textContent = " ";
+        caixaAlternativas.textContent = "";
         mostraAlternativas();
      }
         function mostraAlternativas() {
@@ -92,15 +97,15 @@ const perguntas = [
             }
         }
    function mostraResultado() {
-     caixaPerguntas.textContent = "Em 2049...";
+     caixaPerguntas.textContent = "O cultural abrange várias áreas e dentre elas temos a arte, a música, o texto, a dança e muitos outros, todas elas conversando entre si, formam um lindo espetáculo.";
      textoResultado.textContent = historiaFinal;
      caixaAlternativas.textContent = "";
             }
 
     function respostaSelecionada(opcaoSelecionada) {
-     const afirmacoes = opcaoSelecionada.afirmação;
+     const afirmacoes = opcaoSelecionada.afirmacao;
      historiaFinal += afirmacoes + "";
      atual++;
      mostraPergunta();
        }
-    mostraPergunta();
+    
