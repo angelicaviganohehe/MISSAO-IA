@@ -1,13 +1,8 @@
 const caixaPrincipal = document.querySelector('.caixa-principal');
-
 const caixaPerguntas = document.querySelector('.caixa-perguntas');
-    
 const caixaAlternativas = document.querySelector('.caixa-alternativas');
-    
 const caixaResultado = document.querySelector('.caixa-resultado');
-    
 const textoResultado = document.querySelector('.texto-resultado');
-
 const perguntas = [
     {
     enunciado: "Em que lugar teve origem a palavra música?",
@@ -18,19 +13,19 @@ const perguntas = [
         },
     {
         texto: "Grécia",
-        afirmação: "afirmacao"
-        }
+        afirmação: ""
+        },
     {
         texto: "Brasil",
         afirmação: ""
     
-    }
+    },
     {
         texto: "Ìndia",
         afirmação: ""
-    }
-]
+    }]
     },
+
     {
     enunciado: "Quais são os elementos que compõe a dança?",
     alternativas: [
@@ -45,9 +40,8 @@ const perguntas = [
 
         {texto: "ordem e transferência",
         afirmação: ""
-         }
-        ]
-    },
+         }]
+        },
     
 
     {
@@ -68,10 +62,9 @@ const perguntas = [
 
          {texto: "Artes musicais",
          afirmação: ""
-          }
-          ]
-   },
-    ]
+          }]
+      },
+    ];
 
     let atual = 0;
     let perguntaAtual;
@@ -84,7 +77,7 @@ const perguntas = [
             }
         perguntaAtual = perguntas[atual];
         caixaPerguntas.textContent = perguntaAtual.enunciado;
-        caixaAlternativas.textContent = "";
+        caixaAlternativas.textContent = " ";
         mostraAlternativas();
      }
         function mostraAlternativas() {
@@ -103,9 +96,10 @@ const perguntas = [
             }
 
     function respostaSelecionada(opcaoSelecionada) {
-     const afirmacoes = opcaoSelecionada.afirmacao;
+     const afirmacoes = opcaoSelecionada.afirmação;
      historiaFinal += afirmacoes + "";
      atual++;
      mostraPergunta();
        }
+    mostraPergunta();
     
